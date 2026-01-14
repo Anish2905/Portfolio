@@ -3,7 +3,7 @@
 export const SITE_CONFIG = {
   name: "Anish Sharma",
   title: "DevOps Engineer",
-  description: "DevOps Engineer building reliable infrastructure with Docker, Kubernetes, and Terraform. Automating everything with Python and Bash.",
+  description: "Professional YAML wrangler. I spend 6 hours automating a 5-minute task so I never have to do it again.",
   email: "anishsharma.tech@gmail.com",
   phone: "+91 9874994511",
   location: "Kolkata, India",
