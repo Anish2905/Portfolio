@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SpotlightCursor from "@/components/ui/SpotlightCursor";
+import AnimatedBackground from "@/components/ui/AnimatedBackground";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
@@ -22,36 +23,39 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anish Sharma | Software Engineer & AI Developer",
+  title: "Anish Sharma | Full Stack Web Developer",
   description:
-    "Software Engineer specializing in AI/ML, backend development, and cloud technologies. B.Tech CSE student at UEM Kolkata. Open to internships and full-time opportunities.",
+    "Full Stack Web Developer specializing in building high-performance web systems, Django backend APIs, scalable React frontends, PostgreSQL, and AWS architectures. Currently developing at HLTHTek Optimus.",
   keywords: [
     "Anish Sharma",
-    "Software Engineer",
-    "AI Developer",
-    "Machine Learning",
-    "Python Developer",
-    "TensorFlow",
-    "PyTorch",
-    "Backend Developer",
+    "Full Stack Web Developer",
+    "React.js",
+    "JavaScript",
+    "Python",
+    "Django",
+    "AWS",
+    "PostgreSQL",
+    "REST APIs",
+    "CI/CD",
+    "Postman",
+    "Software Developer",
     "Kolkata",
-    "UEM",
   ],
   authors: [{ name: "Anish Sharma", url: "https://github.com/Anish2905" }],
   creator: "Anish Sharma",
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Anish Sharma | Software Engineer & AI Developer",
+    title: "Anish Sharma | Full Stack Web Developer",
     description:
-      "Software Engineer specializing in AI/ML, backend development, and cloud technologies. Check out my projects and get in touch!",
+      "Full Stack Web Developer specializing in React, Django, PostgreSQL, and AWS. Check out my projects and get in touch!",
     siteName: "Anish Sharma Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anish Sharma | Software Engineer & AI Developer",
+    title: "Anish Sharma | Full Stack Web Developer",
     description:
-      "Software Engineer specializing in AI/ML, backend development, and cloud technologies.",
+      "Full Stack Web Developer specializing in React, Django, PostgreSQL, and AWS.",
     creator: "@anish_log",
   },
   robots: {
@@ -69,12 +73,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="theme-color" content="#09090b" />
+        <meta name="theme-color" content="#030014" />
       </head>
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased selection:bg-purple-500/20`}
         suppressHydrationWarning
       >
+        <AnimatedBackground />
         <SpotlightCursor />
         <Navbar />
         <main>{children}</main>
