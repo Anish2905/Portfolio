@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SpotlightCursor from "@/components/ui/SpotlightCursor";
-import AnimatedBackground from "@/components/ui/AnimatedBackground";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
@@ -76,10 +75,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#030014" />
       </head>
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased selection:bg-purple-500/20`}
+        className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <AnimatedBackground />
         <SpotlightCursor />
         <Navbar />
         <main>{children}</main>

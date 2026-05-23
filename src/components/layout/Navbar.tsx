@@ -22,26 +22,23 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glass py-3 border-b border-purple-500/10 shadow-lg shadow-black/30"
+          ? "glass py-3 border-b border-border shadow-sm"
           : "py-5 bg-transparent"
       }`}
     >
       <nav className="max-w-5xl mx-auto px-6 flex items-center justify-between">
-        {/* Monogram Brand Logo */}
-        <motion.a
+        {/* Brand Logo - Elegant Simple Name */}
+        <a
           href="#"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-violet-500 to-cyan-400 bg-clip-text text-transparent font-heading tracking-wider"
+          className="text-base font-bold text-foreground font-heading tracking-wide hover:opacity-85 transition-opacity"
         >
-          AS
-        </motion.a>
+          {SITE_CONFIG.name}
+        </a>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <a key={link.href} href={link.href} className="nav-link">
-              <span className="text-[10px] text-purple-400 font-mono mr-1.5">{link.num}</span>
               {link.label}
             </a>
           ))}
@@ -54,13 +51,13 @@ export default function Navbar() {
             href={SITE_CONFIG.resume}
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             className="btn-primary"
           >
-            Resume
+            <span>Resume</span>
             <svg
-              className="w-4 h-4 text-white"
+              className="w-4 h-4 text-current"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -80,22 +77,22 @@ export default function Navbar() {
           <ThemeToggle />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="w-9 h-9 flex flex-col justify-center items-center gap-1.5 border border-purple-500/20 rounded-[var(--radius)] text-purple-400 hover:text-white transition-colors"
+            className="w-9 h-9 flex flex-col justify-center items-center gap-1 border border-border rounded-[var(--radius)] text-foreground/80 hover:text-foreground transition-colors"
             aria-label="Toggle mobile menu"
           >
             <span
-              className={`w-5 h-0.5 bg-current transition-transform duration-300 ${
-                mobileMenuOpen ? "rotate-45 translate-y-2" : ""
+              className={`w-4 h-0.5 bg-current transition-transform duration-300 ${
+                mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
               }`}
             />
             <span
-              className={`w-5 h-0.5 bg-current transition-opacity duration-300 ${
+              className={`w-4 h-0.5 bg-current transition-opacity duration-300 ${
                 mobileMenuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`w-5 h-0.5 bg-current transition-transform duration-300 ${
-                mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              className={`w-4 h-0.5 bg-current transition-transform duration-300 ${
+                mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
               }`}
             />
           </button>
@@ -110,17 +107,16 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-purple-500/10 bg-[rgba(3,0,20,0.95)] backdrop-filter backdrop-blur-xl"
+            className="md:hidden border-t border-border bg-card shadow-lg"
           >
-            <div className="px-6 py-8 flex flex-col gap-6">
+            <div className="px-6 py-6 flex flex-col gap-5">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="nav-link text-lg flex items-center"
+                  className="nav-link text-base flex items-center"
                 >
-                  <span className="text-xs text-purple-400 font-mono mr-3">{link.num}</span>
                   {link.label}
                 </a>
               ))}
@@ -128,11 +124,11 @@ export default function Navbar() {
                 href={SITE_CONFIG.resume}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary mt-4 w-full"
+                className="btn-primary mt-2 w-full"
               >
-                Resume
+                <span>Resume</span>
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-4 h-4 text-current"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

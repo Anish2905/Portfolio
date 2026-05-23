@@ -73,37 +73,37 @@ export default function Terminal() {
         
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="mb-10"
         >
-          <span className="section-label">Interactive Console</span>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-heading">
+          <span className="section-label">Console</span>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight font-heading text-foreground">
             Interactive Terminal
           </h2>
-          <p className="text-indigo-200/50 text-sm mt-2 max-w-md">
+          <p className="text-muted-foreground text-sm mt-2 max-w-md">
             Query my credentials, skills, work experience, and stack inside a custom sandboxed zsh shell.
           </p>
         </motion.div>
 
         {/* Terminal Shell Window */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="terminal border border-purple-500/20 shadow-2xl shadow-purple-500/5"
+          transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+          className="terminal border border-border shadow-md bg-card"
         >
           {/* macOS window top bar */}
           <div className="terminal-header flex items-center justify-between">
             <div className="flex gap-2">
-              <span className="terminal-dot bg-rose-500 hover:bg-rose-600 transition-colors cursor-pointer" />
-              <span className="terminal-dot bg-amber-500 hover:bg-amber-600 transition-colors cursor-pointer" />
-              <span className="terminal-dot bg-emerald-500 hover:bg-emerald-600 transition-colors cursor-pointer" />
+              <span className="w-2.5 h-2.5 rounded-full bg-rose-500/70" />
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-500/70" />
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/70" />
             </div>
-            <span className="text-xs font-mono font-medium text-indigo-300/40 select-none">
+            <span className="text-xs font-mono font-medium text-muted-foreground/70 select-none">
               anish@fullstack ~ zsh
             </span>
             <div className="w-14" /> {/* spacer to balance lights */}
@@ -113,22 +113,22 @@ export default function Terminal() {
           <div
             ref={bodyRef}
             onClick={() => inputRef.current?.focus()}
-            className="terminal-body cursor-text max-h-[350px] min-h-[300px] overflow-y-auto"
+            className="terminal-body cursor-text max-h-[350px] min-h-[300px] overflow-y-auto bg-card text-foreground"
           >
             {history.map((item, i) => (
               <div key={i} className="mb-2">
                 {item.command && (
-                  <div className="flex gap-2.5 items-center mb-1">
+                  <div className="flex gap-2 items-center mb-1">
                     <span className="terminal-prompt select-none">❯</span>
-                    <span className="font-semibold text-white">{item.command}</span>
+                    <span className="font-semibold text-foreground">{item.command}</span>
                   </div>
                 )}
-                <pre className="terminal-output">{item.output}</pre>
+                <pre className="terminal-output text-muted-foreground font-mono">{item.output}</pre>
               </div>
             ))}
             
             {/* Input Line */}
-            <div className="flex gap-2.5 items-center mt-2">
+            <div className="flex gap-2 items-center mt-2">
               <span className="terminal-prompt select-none">❯</span>
               <input
                 ref={inputRef}
@@ -136,7 +136,7 @@ export default function Terminal() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="terminal-input"
+                className="terminal-input text-foreground font-mono"
                 autoComplete="off"
                 spellCheck={false}
                 placeholder="type 'help' to start..."

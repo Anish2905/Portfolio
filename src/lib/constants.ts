@@ -3,7 +3,7 @@
 export const SITE_CONFIG = {
   name: "Anish Sharma",
   title: "Full Stack Web Developer",
-  description: "I build high-performance web systems and scalable architectures. Currently developing at HLTHTek Optimus, crafting robust solutions from frontend interfaces to backend systems.",
+  description: "I build responsive frontend interfaces and clean backend APIs. Currently a Software Developer at HLTHTek Optimus, working with React, Django, and PostgreSQL.",
   email: "anishsharma.tech@gmail.com",
   phone: "+91 9874994511",
   location: "Kolkata, India",
@@ -22,10 +22,10 @@ export const NAV_LINKS = [
 
 export const SKILLS_DATA = {
   frontend: ["React.js", "JavaScript", "TypeScript", "Next.js", "HTML5 & CSS3", "Tailwind CSS"],
-  backend: ["Python & Django", "REST APIs", "Node.js", "Express.js", "API Design"],
-  database: ["PostgreSQL", "MongoDB", "Redis", "SQL Optimization"],
-  devops_cloud: ["AWS (EC2, S3, Lambda)", "Docker", "CI/CD & Testing", "GitHub Actions"],
-  tools: ["Postman", "Git/GitHub", "Jest", "VS Code"],
+  backend: ["Python & Django", "REST APIs", "Node.js", "Express.js"],
+  database: ["PostgreSQL", "MongoDB", "SQL Basics"],
+  devops_cloud: ["AWS Basics", "Docker", "CI/CD & Testing", "Git & GitHub"],
+  tools: ["Postman", "Jest", "VS Code"],
 } as const;
 
 export const EXPERIENCE_DATA = [
@@ -35,11 +35,9 @@ export const EXPERIENCE_DATA = [
     location: "Kolkata, India",
     period: "Jan 2026 - Present",
     highlights: [
-      "Architecting and shipping responsive, user-centric web applications utilizing React.js, Next.js, and TypeScript.",
-      "Developing and scaling robust backend microservices and REST APIs using Python, Django, and Express.js.",
-      "Designing highly optimized database schemas, writing efficient queries in PostgreSQL, and utilizing Redis for caching.",
-      "Deploying scalable, cloud-native systems on AWS (EC2, S3, Lambda) with automated Docker containers.",
-      "Implementing comprehensive test suites with Jest and automating robust CI/CD pipelines via GitHub Actions."
+      "Contributing to the development and maintenance of frontend web pages using React.js and TypeScript.",
+      "Assisting in building and testing backend REST APIs with Python and Django.",
+      "Writing clean database queries in PostgreSQL and participating in codebase updates."
     ],
   },
   {
@@ -48,9 +46,8 @@ export const EXPERIENCE_DATA = [
     location: "Kolkata, India",
     period: "Mar 2025 - Oct 2025",
     highlights: [
-      "Engineered automated SQL scripts for healthcare data verification and standardization for US facility partners.",
-      "Optimized Revenue Cycle Management (RCM) operations by cleaning databases and tuning query performance.",
-      "Designed and deployed analytics dashboards tracking financial metrics, boosting reporting efficiency."
+      "Assisted with SQL database updates and data verification for US facilities.",
+      "Standardized facility records for optimized internal workflow analytics."
     ],
   },
 ] as const;
@@ -139,17 +136,16 @@ export const TERMINAL_COMMANDS: Record<string, string> = {
   │               Full Stack Web Developer                 │
   ╰────────────────────────────────────────────────────────╯
   
-  🎓 B.Tech CSE (CSE) @ UEM Kolkata (Graduating July 2026)
+  🎓 B.Tech CSE @ UEM Kolkata (Graduating July 2026)
   💼 Software Developer @ HLTHTek Optimus Private Limited
   📍 Kolkata, West Bengal, India
   
-  I build high-performance web systems and scalable architectures.
-  React, Next.js, and modern CSS on the frontend; Python/Django,
-  Express, PostgreSQL, and AWS on the backend.
+  I build frontend interfaces and backend APIs. My current focus
+  is working with React.js, Python, Django, and PostgreSQL.
   
-  Currently shipping: Scalable enterprise full-stack solutions.
+  Currently working on: Feature updates and codebase improvements.
   
-  ✓ Employed & always open to discuss high-impact opportunities!
+  ✓ Employed & open to learning and new opportunities.
 `,
   help: `
   ╭────────────────────────────────────────────────────────╮
@@ -157,13 +153,13 @@ export const TERMINAL_COMMANDS: Record<string, string> = {
   ╰────────────────────────────────────────────────────────╯
   
     whoami     →  Who am I? Personal intro & current focus
-    skills     →  View my full technical capabilities
-    exp        →  Explore my software development career
-    projects   →  Browse my featured software projects
+    skills     →  View my technical capabilities
+    exp        →  Explore my work history
+    projects   →  Browse my featured projects
     certs      →  Certifications & academic credentials
     status     →  Check my availability status
-    socials    →  Find my links to GitHub, LinkedIn, etc.
-    contact    →  Get my email and phone number details
+    socials    →  Find my social links
+    contact    →  Get my contact details
     clear      →  Clear the terminal display
 `,
   skills: `
@@ -172,24 +168,19 @@ export const TERMINAL_COMMANDS: Record<string, string> = {
   ╰────────────────────────────────────────────────────────╯
   
   FRONTEND DEVELOPMENT
-  ├─ React & Next.js  ██████████████░░░░  Expert
-  ├─ JS & TS          ██████████████░░░░  Expert
+  ├─ React & Next.js  ████████████░░░░░░  Advanced
+  ├─ JS & TS          ████████████░░░░░░  Advanced
   └─ CSS3 & Tailwind  ████████████░░░░░░  Advanced
   
   BACKEND DEVELOPMENT
-  ├─ Python & Django  ██████████████░░░░  Expert
-  ├─ Node & Express   ████████████░░░░░░  Advanced
-  └─ REST API Design  ██████████████░░░░  Expert
+  ├─ Python & Django  ████████████░░░░░░  Advanced
+  ├─ Node & Express   ████████░░░░░░░░░░  Intermediate
+  └─ REST APIs        ████████████░░░░░░  Advanced
   
-  DATABASES
-  ├─ PostgreSQL       ████████████░░░░░░  Advanced
-  ├─ MongoDB          ██████████░░░░░░░░  Proficient
-  └─ Redis            ████████░░░░░░░░░░  Intermediate
-  
-  DEVOPS & CLOUD
-  ├─ AWS (EC2/S3/Lmb) ██████████░░░░░░░░  Proficient
-  ├─ Docker & CI/CD   ████████████░░░░░░  Advanced
-  └─ GitHub Actions   ████████████░░░░░░  Advanced
+  DATABASES & CLOUD
+  ├─ PostgreSQL       ██████████░░░░░░░░  Intermediate
+  ├─ MongoDB          ████████░░░░░░░░░░  Intermediate
+  └─ AWS & Docker     ████████░░░░░░░░░░  Intermediate
 `,
   exp: `
   ╭────────────────────────────────────────────────────────╮
@@ -199,18 +190,16 @@ export const TERMINAL_COMMANDS: Record<string, string> = {
   ┌─ SOFTWARE DEVELOPER
   │  HLTHTek Optimus Private Limited (Jan 2026 - Present)
   │
-  │  • Developing full-stack applications with React & Django.
-  │  • Designing optimized SQL schemas and APIs in PostgreSQL.
-  │  • Packaging microservices with Docker and deploying to AWS.
-  │  • Engineering CI/CD automation & thorough unit test coverage.
+  │  • Contributing to frontend features with React.js & TS.
+  │  • Assisting with Django backend development & testing.
+  │  • Writing clean SQL queries and managing PostgreSQL database tasks.
   └─────────────────────────────────────────────────────────
   
   ┌─ PROCESS ASSOCIATE
   │  Sun Knowledge Services Inc. (Mar 2025 - Oct 2025)
   │
-  │  • Engineered SQL processes to clean & ingest US healthcare data.
-  │  • Boosted Revenue Cycle Management (RCM) workflow speeds.
-  │  • Created interactive revenue tracking analytics dashboards.
+  │  • Assisted with SQL database updates and data verification.
+  │  • Standardized facility records for internal reporting.
   └─────────────────────────────────────────────────────────
 `,
   projects: `
@@ -246,7 +235,7 @@ export const TERMINAL_COMMANDS: Record<string, string> = {
   ✓ Databricks Fundamentals Accreditation
   ✓ Generative AI Fundamentals Accreditation
   
-  🎓 B.Tech Computer Science & Engineering (AIML)
+  🎓 B.Tech Computer Science & Engineering
      University of Engineering & Management, Kolkata
      Expected Graduation: July 2026 | Cumulative GPA: 7.45
 `,
@@ -258,12 +247,11 @@ export const TERMINAL_COMMANDS: Record<string, string> = {
   💼 Currently: Employed full-time as a Software Developer
                 at HLTHTek Optimus Private Limited.
   
-  🎯 Focus:     Building robust web systems, cloud-native APIs,
-                and high-fidelity user experiences.
+  🎯 Focus:     Building clean code, learning new frameworks,
+                and contributing to scalable applications.
   
-  🌱 Status:    Satisfied with my current role, but always
-                open to connecting for high-impact full-stack
-                advisory or innovative software roles.
+  🌱 Status:    Focused on my current role, but open to 
+                connecting and sharing ideas.
 `,
   socials: `
   ╭────────────────────────────────────────────────────────╮
@@ -283,8 +271,7 @@ export const TERMINAL_COMMANDS: Record<string, string> = {
   📧 Email   :: anishsharma.tech@gmail.com
   📱 Phone   :: +91 9874994511
   
-  Feel free to shoot me an email! Let's build something
-  scalable and remarkable together. 🚀
+  Feel free to shoot me an email! Let's connect. 🚀
 `,
 };
 

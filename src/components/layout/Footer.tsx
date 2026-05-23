@@ -7,11 +7,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 border-t border-purple-500/10 relative z-10 bg-[rgba(3,0,20,0.4)] backdrop-blur-md">
+    <footer className="py-12 border-t border-border relative z-10 bg-card">
       <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         
-        {/* Monogram / Title */}
-        <p className="text-xs font-mono text-indigo-300/40 select-none">
+        {/* Copyright block */}
+        <p className="text-xs font-mono text-muted-foreground select-none">
           © {currentYear} {SITE_CONFIG.name}. All Rights Reserved.
         </p>
 
@@ -20,13 +20,13 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-xs sm:text-sm font-medium text-purple-400/70 text-center"
+          className="text-xs font-medium text-muted-foreground text-center"
         >
           Made while mass procrastinating & shipped with ☕
         </motion.p>
 
         {/* Minimal Tech Tag */}
-        <p className="text-[10px] font-mono text-cyan-400/60 uppercase tracking-widest bg-cyan-400/5 px-2.5 py-1 rounded border border-cyan-400/10">
+        <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest bg-muted px-2.5 py-1 rounded border border-border">
           React 19 & Next.js 16
         </p>
 
